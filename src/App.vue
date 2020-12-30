@@ -1,28 +1,40 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class = 'container my-5'>
+    
+    <cocktail class="align-middle"/>
+    <video playsinline autoplay muted loop>
+      <source src="./assets/bg-bar.mp4">
+    </video>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+import cocktail from "./components/cocktail.vue"
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    cocktail
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+/*
+html,body{
+  background-color: darkgray;
+}*/
+html{
+
+}
+video
+{
+  object-fit:cover;
+  width: 100vw;
+  height:100vh;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index: -100;
 }
 </style>
